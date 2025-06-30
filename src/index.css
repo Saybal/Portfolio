@@ -1,0 +1,51 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+@theme {
+  /* Define or override your breakpoints here */
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1280px; /* <--- This is the key change for you */
+  --breakpoint-xl: 1536px;
+  --breakpoint-2xl: 1920px;
+
+  /* You can also add custom breakpoints if you wish, e.g.: */
+  --breakpoint-desktop-large: 1400px;
+}
+
+@layer utilities {
+  .corner-border-box {
+    @apply relative rounded-xl bg-white;
+  }
+
+  .corner-border-box::before,
+  .corner-border-box::after {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    z-index: 10;
+  }
+
+  .corner-border-box::before {
+    top: 0;
+    left: 0;
+    border-top: 6px solid #2072AF;
+    border-left: 6px solid #2072AF;
+    border-top-left-radius: 0.75rem; /* matches rounded-xl */
+  }
+
+  .corner-border-box::after {
+    bottom: 0;
+    right: 0;
+    border-bottom: 6px solid #2072AF;
+    border-right: 6px solid #2072AF;
+    border-bottom-right-radius: 0.75rem;
+  }
+}
+
+
+
+
+
+
