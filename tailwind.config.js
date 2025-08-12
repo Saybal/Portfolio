@@ -12,6 +12,12 @@ export default {
       'xl': '1536px',
       '2xl': '1920px',
     },
+    extend: {
+    fontFamily: {
+      head: ['Montserrat', 'sans-serif'],
+      poppins: ['Poppins', 'sans-serif'],
+    },
+  },
     plugins: [],
   }
 }
