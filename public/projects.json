@@ -1,11 +1,11 @@
 [
     
   {
-    "title": "ChronRelic – Artifact Tracker",
+    "title": "ChronoRelic – Artifact Tracker",
     "description":
       "ChronRelic is a knowledge-sharing platform for historic and mythical artifacts. Users can learn detailed histories, and upload their own explored artifacts. Includes Firebase Authentication, protected routes, and MongoDB for storing artifacts and user posts.",
     "image": "https://i.ibb.co/PvB77LjD/image.png",
-    "liveLink": "https://chronrelic.web.app",
+    "liveLink": "https://chornorelic.web.app/",
     "githubLink": "https://github.com/Saybal/ChronoRelic",
     "techStack": ["https://i.ibb.co/WvdQ0w1R/3c533fa9-ca5a-4b0a-a585-8607d557d85d-removalai-preview.png", "https://i.ibb.co/C59GDh1k/210c24e4-bd58-43cb-85dc-a4099da0e610-removalai-preview.png", "https://i.ibb.co/6RpTBP4c/image.png","https://i.ibb.co/m5H1zqvZ/image.png", "https://i.ibb.co/278qHRZZ/image.png", "https://i.ibb.co/wNVS3Ls6/image.png", "https://i.ibb.co/W4f1nVPs/image.png"]
   },

@@ -1,4 +1,5 @@
 import { Link } from "react-scroll";
+import { useTheme } from "../../Hook/useTheme";
 import react_icon from "../../assets/React.png";
 import express_icon from "../../assets/Express.png";
 import mongodb_icon from "../../assets/mongodb.png";
@@ -11,36 +12,38 @@ import html_icon from "../../assets/HTML.png";
 import css_icon from "../../assets/CSS.png";
 
 const AboutMe = () => {
+
+  const currentTheme = useTheme();
   const skills_1 = [
     {
       id: 1,
       skill: "ReactJS",
       icon: react_icon,
-      projects: 0,
+      projects: 6,
     },
     {
       id: 2,
       skill: "ExpressJS",
       icon: express_icon,
-      projects: 0,
+      projects: 4,
     },
     {
       id: 3,
       skill: "MongoDB",
       icon: mongodb_icon,
-      projects: 0,
+      projects: 4,
     },
     {
       id: 4,
       skill: "Firebase",
       icon: Firebase_icon,
-      projects: 0,
+      projects: 4,
     },
     {
       id: 5,
       skill: "JWT",
       icon: JWT_icon,
-      projects: 0,
+      projects: 2,
     },
   ];
 
@@ -49,46 +52,46 @@ const AboutMe = () => {
       id: 1,
       skill: "Tailwind CSS",
       icon: tailwind_icon,
-      projects: 0,
+      projects: 10,
     },
     {
       id: 2,
       skill: "Figma",
       icon: figma_icon,
-      projects: 0,
+      projects: 9,
     },
     {
       id: 3,
       skill: "JavaScript",
       icon: js_icon,
-      projects: 0,
+      projects: 9,
     },
     {
       id: 4,
       skill: "HTML",
       icon: html_icon,
-      projects: 0,
+      projects: 12,
     },
     {
       id: 5,
       skill: "CSS",
       icon: css_icon,
-      projects: 0,
+      projects: 12,
     },
   ];
 
   return (
-    <div id="about" className="px-4 md:px-16 py-12 bg-white text-[#0D2E29]">
+    <div id="about" className={`px-4 md:px-16 py-12 ${currentTheme === 'acid' ? "bg-white" : ""} text-[#0D2E29]`}>
       <p className="text-[#0070BB] body-font font-bold mb-2">
-        About <span className="text-black">Me</span>
+        About <span className={`${currentTheme === 'acid' ? "text-black" : "text-white"}`}>Me</span>
       </p>
-      <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold max-w-4xl mb-10 leading-snug font-head">
+      <h2 className="body-font text-2xl md:text-3xl lg:text-4xl font-bold max-w-4xl mb-10 leading-snug text-base-content">
         Described Briefly My Professional Background Skills and Accomplishments
       </h2>
 
       <div className="flex flex-col lg:flex-row gap-10">
         {/* Left - Image */}
-        <div className="rounded-2xl corner-border-box p-2 flex justify-center lg:justify-start">
+        <div className="rounded-2xl corner-border-box p-2 bg-none flex justify-center lg:justify-start">
           <img
             src="https://i.ibb.co/gZH0bYr1/Whats-App-Image-2025-06-29-at-12-39-13-3c5b5905.jpg"
             alt="Profile"
@@ -98,15 +101,15 @@ const AboutMe = () => {
 
         {/* Middle - Text */}
         <div className="body-font flex-1 space-y-4">
-          <h3 className="font-bold text-base md:text-lg">
+          <h3 className="font-bold text-base md:text-lg text-base-content">
             Hello! I'm a Professional Web Designer providing awesome cool design
             stuff for clients.
             <br />
-            <span className="text-[#0D2E29] font-semibold">
+            <span className={`${currentTheme === 'acid' ? "text-[#0D2E29]" : "text-gray-400"} font-semibold`}>
               My vision is to satisfy my client.
             </span>
           </h3>
-          <p className="text-gray-600 text-sm md:text-base">
+          <p className={`text-sm md:text-base ${currentTheme === 'acid' ? "text-gray-600" : "text-gray-400"}`}>
             I'm Saybal Roy, a passionate Full Stack Web Developer skilled in
             React, Node.js, Firebase, and MongoDB. I specialize in creating
             responsive, scalable web apps with clean code and intuitive UI/UX. I
@@ -123,8 +126,8 @@ const AboutMe = () => {
         </div>
 
         {/* Right - Skills */}
-        <div className="body-font w-full lg:w-1/3 space-y-4 bg-gray-50 rounded-lg p-4 ">
-          <h4 className="font-semibold text-xl border-b pb-2">Skills</h4>
+        <div className={`body-font w-full lg:w-1/3 space-y-4 ${currentTheme === 'acid' ? "bg-gray-50" : "bg-[#2A3439]/50 border border-base-content/10"}  rounded-lg p-4`}>
+          <h4 className="font-semibold text-xl text-base-content border-b pb-2">Skills</h4>
 
           <div className="grid grid-cols-2 gap-4 mx-auto">
             <div className="border-r-2">
@@ -139,10 +142,10 @@ const AboutMe = () => {
                     alt={`${skill} Icon`}
                   />
                   <div>
-                    <h2 className="text-[#2072AF] text-sm sm:text-lg md:text-xl font-semibold">
+                    <h2 className={`${currentTheme === 'acid' ? "text-[#2072AF]" : "text-blue-400"} text-sm sm:text-lg md:text-xl font-semibold`}>
                       {skill}
                     </h2>
-                    <p className="text-xs sm:text-sm md:text-base">
+                    <p className="text-xs sm:text-sm md:text-base text-base-content">
                       {projects} Projects
                     </p>
                   </div>
@@ -161,10 +164,10 @@ const AboutMe = () => {
                     alt={`${skill} Icon`}
                   />
                   <div>
-                    <h2 className="text-[#2072AF] text-sm sm:text-lg md:text-xl font-semibold">
+                    <h2 className={`${currentTheme === 'acid' ? "text-[#2072AF]" : "text-blue-400"} text-sm sm:text-lg md:text-xl font-semibold`}>
                       {skill}
                     </h2>
-                    <p className="text-xs sm:text-sm md:text-base">
+                    <p className="text-xs sm:text-sm md:text-base text-base-content">
                       {projects} Projects
                     </p>
                   </div>

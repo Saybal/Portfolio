@@ -18,8 +18,8 @@ const Banner = () => {
 
         {/* Left Text Section */}
         <div className="z-10 flex-1 space-y-6 text-center lg:text-left mt-6 lg:mt-0 px-4 sm:px-8 md:px-12 lg:px-16 py-10">
-          <h3 className="head-font text-2xl md:text-3xl font-medium">Hello I’m Saybal!</h3>
-          <h1 className="head-font text-4xl md:text-5xl lg:text-6xl font-bold">
+          <h3 className="body-font text-2xl md:text-3xl font-medium">Hello I’m Saybal!</h3>
+          <h1 className="body-font text-4xl md:text-5xl lg:text-6xl font-bold">
             A Web <span className="text-[#00BFFF]">Developer</span>
           </h1>
           <p className="body-font max-w-xl mx-auto lg:mx-0 text-gray-200 text-sm md:text-base">
@@ -27,7 +27,7 @@ const Banner = () => {
             and approaches every problem with a determined, solution-oriented
             attitude.
           </p>
-          <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
+          <div className="body-font flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
             <Link to="contact" smooth={true} duration={300} offset={-80}>
               <button className="bg-[#00BFFF] text-black font-semibold px-6 py-3 rounded-md hover:bg-[#0077ff] transition-all"> Hire Me
             </button>

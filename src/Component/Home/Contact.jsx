@@ -9,8 +9,11 @@ import {
 import { IoLocation } from "react-icons/io5";
 import emailjs from "emailjs-com";
 import Swal from "sweetalert2";
+import { useTheme } from "../../Hook/useTheme";
 
 const Contact = () => {
+
+  const currentTheme = useTheme();
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -48,26 +51,24 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="px-4 md:px-12 lg:px-24 py-16 bg-[#f1f5f9] text-[#0D2E29]"
+      className={`body-font px-4 md:px-12 lg:px-24 py-16 ${currentTheme === 'acid' ? "bg-[#f1f5f9] text-[#0D2E29]" : "text-base-content"}`}
     >
       <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
         Contact Me
       </h2>
 
-      <div className="flex flex-col lg:flex-row bg-white rounded-2xl shadow-lg overflow-hidden">
+      <div className="body-font flex flex-col lg:flex-row bg-white rounded-2xl shadow-lg overflow-hidden">
         {/* Left Side - Contact Info */}
-        <div className="relative flex-1">
+        <div className={`relative flex-1 ${currentTheme === 'acid' ? "bg-white" : "bg-base-100"} text-base-content border border-white/15 border-b-0 lg:border-r-0`}>
           <div
-            className="absolute inset-0 bg-cover bg-no-repeat bg-center opacity-9"
-            style={{
-              backgroundImage: "url('https://i.ibb.co/5XX3c1C6/image.png')",
-            }}
+            className={`absolute inset-0 bg-cover bg-no-repeat bg-center ${currentTheme === 'acid' ? "opacity-9 bg-[url('https://i.ibb.co/5XX3c1C6/image.png')]" : "opacity-5 bg-[url('https://i.ibb.co/PsmWdjXW/image.png')]"} `}
+            
           ></div>
           <div className="relative p-8 bg-none">
-            <h3 className="flex gap-1 items-center justify-center text-4xl font-bold mb-4 text-[#003153]">
+            <h3 className={`flex gap-1 items-center justify-center text-4xl font-bold mb-4 ${currentTheme === 'acid' ? "text-[#003153]" : "text-base-content"}`}>
               Get in Touch <MdTouchApp />{" "}
             </h3>
-            <p className="text-gray-600 mb-6 flex items-center gap-1 text-base md:text-lg lg:text-xl">
+            <p className={`mb-6 flex items-center gap-1 text-base md:text-lg lg:text-xl ${currentTheme === 'acid' ? "text-gray-600" : "text-gray-400"}`}>
               Feel free to reach out for collaborations or just say hello{" "}
               <MdWavingHand className="text-2xl" />
             </p>

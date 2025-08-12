@@ -1,13 +1,15 @@
 import React from 'react';
 import { FaGithub } from 'react-icons/fa';
 import { MdLiveTv } from "react-icons/md";
+import { useTheme } from '../../../Hook/useTheme';
 
-const Project_Card = ({project}) => {
+const Project_Card = ({ project }) => {
+  const currentTheme = useTheme();
     return (
         <div className='my-6'>
 
           {/* Project Card */}
-          <div className="flex flex-col lg:flex-row bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+          <div className={`body-font flex flex-col lg:flex-row rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300`}>
             {/* Left: Image */}
             <div className="lg:w-1/2 w-full h-64 lg:h-auto">
               <img
@@ -18,10 +20,10 @@ const Project_Card = ({project}) => {
             </div>
 
             {/* Right: Content */}
-            <div className="flex flex-col justify-between p-6 lg:w-1/2 w-full">
+            <div className={`${currentTheme === 'acid' ? "bg-white" : "bg-[#2A3439]/50"} flex flex-col justify-between p-6 lg:w-1/2 w-full`}>
               <div>
                 <h3 className="text-2xl font-bold mb-2">{project.title}</h3>
-                <p className="text-gray-700 text-sm mb-4">
+                <p className={`text-sm mb-4 ${currentTheme === 'acid' ? "text-gray-700" : "text-gray-400"}`}>
                   {project.description}
                 </p>
 
