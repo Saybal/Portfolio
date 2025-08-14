@@ -7,6 +7,7 @@ import {
   MdWavingHand,
 } from "react-icons/md";
 import { IoLocation } from "react-icons/io5";
+import { FaSquareGithub , FaSquareFacebook , FaLinkedin } from "react-icons/fa6";
 import emailjs from "emailjs-com";
 import Swal from "sweetalert2";
 import { useTheme } from "../../Hook/useTheme";
@@ -72,7 +73,7 @@ const Contact = () => {
               Feel free to reach out for collaborations or just say hello{" "}
               <MdWavingHand className="text-2xl" />
             </p>
-            <div className="space-y-4 ttext-base md:text-lg lg:text-xl">
+            <div className="space-y-4 text-base md:text-lg lg:text-xl">
               <p>
                 <strong className="flex gap-1 items-center">
                   <MdEmail className="text-2xl" /> Email:
@@ -100,6 +101,21 @@ const Contact = () => {
                 </strong>{" "}
                 Freelance | Remote{" "}
               </p>
+            </div>
+            {/* Socials */}
+            <div className="space-y-4">
+              <h2 className="w-full text-center font-bold text-lg md:text-xl lg:text-2xl">Connect With Me</h2>
+              <div className="flex justify-center items-center gap-4 text-3xl">
+                <a href="www.linkedin.com/in/saybal-roy" className="hover:text-[#1747f3] transition-all">
+                  <FaLinkedin />
+                </a>
+                <a href="https://github.com/Saybal" className="hover:text-[#1747f3] transition-all">
+                  <FaSquareGithub />
+                </a>
+                <a href="https://www.facebook.com/saybal.roy" className="hover:text-[#1747f3] transition-all">
+                  <FaSquareFacebook /> 
+                </a>
+              </div>
             </div>
           </div>
         </div>
