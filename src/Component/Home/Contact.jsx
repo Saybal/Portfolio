@@ -106,7 +106,7 @@ const Contact = () => {
             <div className="space-y-4">
               <h2 className="w-full text-center font-bold text-lg md:text-xl lg:text-2xl">Connect With Me</h2>
               <div className="flex justify-center items-center gap-4 text-3xl">
-                <a href="www.linkedin.com/in/saybal-roy" className="hover:text-[#1747f3] transition-all">
+                <a href="https://www.linkedin.com/in/saybal-roy/" className="hover:text-[#1747f3] transition-all">
                   <FaLinkedin />
                 </a>
                 <a href="https://github.com/Saybal" className="hover:text-[#1747f3] transition-all">
