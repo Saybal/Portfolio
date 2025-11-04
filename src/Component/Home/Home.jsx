@@ -4,11 +4,9 @@ import AboutMe from "./AboutMe";
 import Education from "./Education";
 import Projects from "./Projects/Projects";
 import Contact from "./Contact";
-import { useTheme } from "../../Hook/useTheme";
 
 const Home = () => {
 
-    const currentTheme = useTheme();
   return (
     <div>
       <Banner />

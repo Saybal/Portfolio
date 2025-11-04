@@ -268,32 +268,6 @@ const AboutMe = () => {
             variants={itemVariants}
             className="body-font flex-1 space-y-8"
           >
-            {/* Tech Badge */}
-            {/* <motion.div 
-              className="flex flex-wrap gap-3"
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.3 }}
-            >
-              {["React", "Node.js", "MongoDB", "TypeScript"].map((tech, i) => (
-                <motion.span
-                  key={tech}
-                  whileHover={{ scale: 1.1, y: -2 }}
-                  className={`px-4 py-1.5 rounded-full text-xs font-semibold border ${
-                    isDark
-                      ? "bg-cyan-400/10 border-cyan-400/30 text-cyan-300"
-                      : "bg-blue-100 border-blue-300 text-blue-700"
-                  }`}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.4 + i * 0.1 }}
-                >
-                  {tech}
-                </motion.span>
-              ))}
-            </motion.div> */}
 
             <div className="space-y-6">
               <h3 className={`font-bold text-xl md:text-2xl leading-relaxed ${

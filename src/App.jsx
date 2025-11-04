@@ -1,4 +1,3 @@
-import { use } from "react";
 import "./App.css";
 import Home from "./Component/Home/Home";
 import Navbar from "./Component/Navbar";

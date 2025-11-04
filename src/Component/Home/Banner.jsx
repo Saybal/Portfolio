@@ -65,39 +65,9 @@ const Banner = () => {
       className="relative max-w-8xl min-h-[80vh] overflow-hidden"
       style={{
         color: isDark ? '#FFFFFF' : '#001F3F',
-        // background: isDark 
-        //   ? `linear-gradient(45deg, #1a1a1a 0%, #003366 100%),
-        //      repeating-linear-gradient(
-        //        45deg,
-        //        rgba(0, 255, 255, 0.1) 0px,
-        //        rgba(0, 255, 255, 0.1) 20px,
-        //        rgba(0, 191, 255, 0.1) 20px,
-        //        rgba(0, 191, 255, 0.1) 40px
-        //      ),
-        //      radial-gradient(
-        //        circle at 50% 50%,
-        //        rgba(0, 191, 255, 0.3) 0%,
-        //        rgba(0, 153, 204, 0.1) 100%
-        //      )`
-        //   : `linear-gradient(135deg, #ffffff 0%, #e0f2fe 100%),
-        //      radial-gradient(circle 500px at 20% 80%, rgba(0, 191, 255, 0.15), transparent),
-        //      radial-gradient(circle 500px at 80% 20%, rgba(77, 210, 255, 0.15), transparent)`,
-        // backgroundBlendMode: isDark ? "normal, overlay, overlay" : "normal, normal, normal",
         animation: isDark ? "aurora 8s linear infinite" : "none",
       }}
     >
-      {/* Background Layer - Only for dark mode */}
-      {/* {isDark && (
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 0.12 }}
-          transition={{ duration: 1.5 }}
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: "url('https://i.ibb.co/PsmWdjXW/image.png')",
-          }}
-        />
-      )} */}
 
       {/* Foreground Layout */}
       <div className="relative mt-[7rem] w-full h-full px-4 sm:px-8 md:px-12 lg:px-0 py-10 lg:py-0 flex flex-col-reverse lg:flex-row items-center">
