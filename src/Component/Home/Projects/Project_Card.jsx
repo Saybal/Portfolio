@@ -66,7 +66,7 @@ const Project_Card = ({ project, index }) => {
           />
 
           {/* Project Number Badge */}
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, scale: 0 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
@@ -80,7 +80,7 @@ const Project_Card = ({ project, index }) => {
             }}
           >
             {String(index + 1).padStart(2, '0')}
-          </motion.div>
+          </motion.div> */}
         </div>
 
         {/* Right/Left: Content Section */}
